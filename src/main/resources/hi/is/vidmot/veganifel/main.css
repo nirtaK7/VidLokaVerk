@@ -1,0 +1,13 @@
+.root{
+-fx-background-image: url('../Myndir/Bakrunnur.jpg');
+ -fx-background-size: cover;
+ -fx-font-size: 14px;
+}
+#bord{
+-fx-padding:10;
+-fx-border-color:black
+-fx-border-width:15;
+-fx-border-width:5
+
+
+}

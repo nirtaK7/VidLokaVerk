@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -16,10 +17,12 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <GridPane alignment="CENTER" layoutX="40.0" layoutY="94.0" prefHeight="235.0" prefWidth="520.0">
+      <GridPane alignment="TOP_CENTER" layoutX="40.0" layoutY="94.0" prefHeight="235.0" prefWidth="520.0">
         <columnConstraints>
-          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="90.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="90.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="150.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -28,14 +31,22 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button contentDisplay="CENTER" mnemonicParsing="false" text="Button" />
-            <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField prefHeight="26.0" prefWidth="221.0" GridPane.columnIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField GridPane.columnIndex="3" />
+            <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label contentDisplay="CENTER" text="Leikmaður 1" />
+            <Label text="Leikmaður 2" GridPane.rowIndex="1" />
+            <Label text="Leikmaður 3" GridPane.rowIndex="2" />
+            <Label text="Leikmaður 4" GridPane.rowIndex="3" />
+            <Label text="Leikmaður 5" GridPane.columnIndex="2" />
+            <Label text="Leikmaður 6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Leikmaður 7" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="Leikmaður 8" GridPane.columnIndex="2" GridPane.rowIndex="3" />
          </children>
       </GridPane>
       <Button layoutX="521.0" layoutY="340.0" mnemonicParsing="false" text="-&gt;">
