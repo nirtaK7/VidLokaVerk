@@ -4,10 +4,33 @@
  -fx-font-size: 14px;
 }
 #bord{
--fx-padding:10;
--fx-border-color:black
+-fx-border-color:black;
 -fx-border-width:15;
--fx-border-width:5
+-fx-border-width:5;
+}
+#Ja{
+-fx-background-color:#B4CFA2;
+-fx-border-color:#4E8215;
+-fx-border-width:2.5;
+-fx-border-radius:7;
+-fx-background-radius:8;
 
+}
+#Nei{
+-fx-background-color:#DFCFCD;
+-fx-border-color:#C3453D;
+-fx-border-width:2.5;
+-fx-border-radius:7;
+-fx-background-radius:8;
+}
 
+#Draga{
+-fx-background-color:#CBBA64;
+-fx-border-color:Black;
+-fx-border-width:2.5;
+-fx-border-radius:7;
+-fx-background-radius:9;
+}
+#Vote{
+-fx-background-color:#DFE6E9;
 }
