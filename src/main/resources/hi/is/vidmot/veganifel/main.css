@@ -34,3 +34,13 @@
 #Vote{
 -fx-background-color:#DFE6E9;
 }
+#Blar{
+-fx-background-image: url('../Myndir/Smidur.jpg');
+    -fx-background-size: contain;
+    -fx-background-position: center;
+}
+#Raudur{
+-fx-background-image: url('../Myndir/Krakkar.jpg');
+    -fx-background-size: contain;
+    -fx-background-position: center;
+}
