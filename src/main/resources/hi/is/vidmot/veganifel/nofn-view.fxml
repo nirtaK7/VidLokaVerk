@@ -21,7 +21,7 @@
             <Font size="32.0" />
          </font>
       </Label>
-      <GridPane alignment="CENTER" prefHeight="430.0" prefWidth="870.0">
+      <GridPane fx:id="Leikmenn" alignment="CENTER" prefHeight="430.0" prefWidth="870.0">
          <columnConstraints>
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="160.0" />
@@ -35,14 +35,14 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <TextField prefHeight="26.0" prefWidth="221.0" GridPane.columnIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField GridPane.columnIndex="3" />
-            <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <TextField fx:id="L1" prefHeight="26.0" prefWidth="221.0" GridPane.columnIndex="1" />
+            <TextField fx:id="L2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="L3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="L4" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="L5" GridPane.columnIndex="3" />
+            <TextField fx:id="L6" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="L7" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="L8" GridPane.columnIndex="3" GridPane.rowIndex="3" />
             <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="71.0" text="Leikmaður 1" />
             <Label text="Leikmaður 2" GridPane.rowIndex="1" />
             <Label text="Leikmaður 3" GridPane.rowIndex="2" />
@@ -53,7 +53,7 @@
             <Label text="Leikmaður 8" GridPane.columnIndex="2" GridPane.rowIndex="3" />
          </children>
       </GridPane>
-      <Button mnemonicParsing="false" onAction="#Next" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 30;" text="-&gt;" BorderPane.alignment="CENTER_RIGHT">
+      <Button fx:id="fxILagi" mnemonicParsing="false" onAction="#Next" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 30;" text="-&gt;" BorderPane.alignment="CENTER_RIGHT">
                <BorderPane.margin>
                   <Insets bottom="10.0" left="5.0" right="10.0" top="5.0" />
                </BorderPane.margin>
