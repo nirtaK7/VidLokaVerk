@@ -9,27 +9,28 @@ public class Leikmenn {
     public String[] Blar;
     public String[] Graen;
     public String[] Leik;
-    private int NextL=0;
+    private int NextL;
 
     public Leikmenn(){
-        Leik=new String[7];
-        Blar=new String[5];
-        Graen=new String[1];
+        Leik=new String[8];
+        Blar=new String[6];
+        Graen=new String[2];
+        NextL=0;
     }
     public void hlutverk(){
         Random r =new Random();
         int V=0;
         int U=0;
-        Boolean Different=true;
+        boolean Different=true;
         while (Different) {
-            V = r.nextInt();
-            U = r.nextInt();
+            V = r.nextInt(8);
+            U = r.nextInt(8);
             if(V!=U){
                 Different=false;
             }
         }
         int Bnext=0;
-        for (int i=0;i<7;i++) {
+        for (int i=0;i<8;i++) {
             if(i==V){
                 Graen[0]=Leik[i];
             }
@@ -42,15 +43,30 @@ public class Leikmenn {
             }
         }
     }
+
+    public String[] getBlar() {
+        return Blar;
+    }
+
+    public String[] getGraen() {
+        return Graen;
+    }
+
+    public String[] getLeik() {
+        return Leik;
+    }
+
     public boolean fullt(){
-        if(NextL == 7){
+        if(NextL == 8){
             hlutverk();
-        }return NextL == 7;
+        }//return NextL == 8;
+        return true;
+
     }
     public void add(String nafn){
-        if(NextL<7&&nafn!=""){
+        if(nafn.length()>0){
             Leik[NextL]=nafn;
-            NextL+=1;
+            NextL++;
         }
 
     }

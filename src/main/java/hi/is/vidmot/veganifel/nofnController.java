@@ -23,9 +23,10 @@ public class nofnController {
     private TextField L7;
     @FXML
     private TextField L8;
+    public Leikmenn Leikur;
 
     public void Next() {
-        Leikmenn Leikur =new Leikmenn();
+        Leikur =new Leikmenn();
         Leikur.add(L1.getText());
         Leikur.add(L2.getText());
         Leikur.add(L3.getText());
@@ -34,13 +35,10 @@ public class nofnController {
         Leikur.add(L6.getText());
         Leikur.add(L7.getText());
         Leikur.add(L8.getText());
-        ViewSwitcher.switchTo(View.HLUTVERK);
-        /*if(Leikur.fullt()){
+        if(Leikur.fullt()){
+            hlutverkController h=new hlutverkController();
+            h.get(Leikur.getGraen(), Leikur.getBlar(), Leikur.getLeik());
             ViewSwitcher.switchTo(View.HLUTVERK);
         }
-
-         */
-
-
     }
 }
