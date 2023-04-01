@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="867.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="870.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
    <top>
-      <MenuBar prefWidth="591.0" BorderPane.alignment="CENTER">
+      <MenuBar prefWidth="600.0" BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="Hjálp">
             <items>
@@ -57,11 +57,11 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Pane fx:id="Raudur" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                        <Pane fx:id="Gaen" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
                         <Pane fx:id="Blar" prefHeight="200.0" prefWidth="200.0" />
-                        <Pane  prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Pane  prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
