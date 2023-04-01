@@ -71,7 +71,7 @@
       </VBox>
    </center>
    <bottom>
-      <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 30;" text="-&gt;" BorderPane.alignment="CENTER_RIGHT">
+      <Button onAction="#Next" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 30;" text="-&gt;" BorderPane.alignment="CENTER_RIGHT">
          <BorderPane.margin>
             <Insets bottom="10.0" left="5.0" right="10.0" top="5.0" />
          </BorderPane.margin>

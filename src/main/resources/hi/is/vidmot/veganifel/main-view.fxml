@@ -218,7 +218,7 @@
                      </HBox.margin></Button>
                </children>
             </HBox>
-            <Button fx:id="Draga" mnemonicParsing="false" prefHeight="43.0" prefWidth="180.0" text="Draga Spil">
+            <Button onAction="#DragaSpil" fx:id="Draga" mnemonicParsing="false" prefHeight="43.0" prefWidth="180.0" text="Draga Spil">
                <VBox.margin>
                   <Insets top="5.0" />
                </VBox.margin>
