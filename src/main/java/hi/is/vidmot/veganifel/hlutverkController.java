@@ -5,11 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-import java.util.List;
-import java.util.Random;
-import java.util.Random;
-
-public class hlutverkController {
+public class hlutverkController extends nofnController{
    @FXML
     private Button B1;
     @FXML
@@ -31,21 +27,22 @@ public class hlutverkController {
     public String[] Leik;
     private ObservableList<Button> bList= FXCollections.observableArrayList();
 
-
-
-
     public hlutverkController(){
-        initialize();
+
     }
-    public void get(String[] b,String[] g,String[] L){
-        this.Blar=b;
-        this.Graen=g;
-        this.Leik=L;
+    public void get(){
+        Leikmenn HlutV=getLeikur();
+       /* this.Blar=HlutV.getBlar();
+        this.Graen=HlutV.getGraen();
+        this.Leik=HlutV.getLeik();
+        */
+        //System.out.println("Leik[" + 0 + "] = "+Leik[0]);
     }
     public void Next() {
         ViewSwitcher.switchTo(View.MAIN);
     }
     public void initialize() {
+
         bList.add(B1);
         bList.add(B2);
         bList.add(B3);
@@ -54,11 +51,12 @@ public class hlutverkController {
         bList.add(B6);
         bList.add(B7);
         bList.add(B8);
-        /*for (int i=0;i<bList.size();i++){
-            bList.get(i).setText(Leik[i]);
+        for (int i=0;i<bList.size();i++){
+           // System.out.println("Leik[" + i + "] = ");
+            //bList.get(i).setText(Leik[i]);
         }
 
-         */
+
 
 
     }

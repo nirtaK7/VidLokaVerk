@@ -66,6 +66,7 @@ public class Leikmenn {
     public void add(String nafn){
         if(nafn.length()>0){
             Leik[NextL]=nafn;
+            //System.out.println(Leik[NextL]);
             NextL++;
         }
 

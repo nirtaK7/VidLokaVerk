@@ -25,6 +25,10 @@ public class nofnController {
     private TextField L8;
     public Leikmenn Leikur;
 
+    public Leikmenn getLeikur() {
+        return Leikur;
+    }
+
     public void Next() {
         Leikur =new Leikmenn();
         Leikur.add(L1.getText());
@@ -37,7 +41,6 @@ public class nofnController {
         Leikur.add(L8.getText());
         if(Leikur.fullt()){
             hlutverkController h=new hlutverkController();
-            h.get(Leikur.getGraen(), Leikur.getBlar(), Leikur.getLeik());
             ViewSwitcher.switchTo(View.HLUTVERK);
         }
     }
