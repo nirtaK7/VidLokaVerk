@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane fx:controller="hi.is.vidmot.veganifel.verkefnastjoriController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:controller="hi.is.vidmot.veganifel.ritariController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <MenuBar prefHeight="30.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <menus>
