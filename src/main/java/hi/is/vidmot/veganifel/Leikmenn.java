@@ -8,14 +8,18 @@ public class Leikmenn {
     //Katrín
     public String[] Blar;
     public String[] Graen;
-    public String[] Leik;
+    public String[][] Leik;
     private int NextL;
+    public Leikmenn L;
+
+
 
     public Leikmenn(){
-        Leik=new String[8];
+        Leik=new String[8][2];
         Blar=new String[6];
         Graen=new String[2];
         NextL=0;
+
     }
     public void hlutverk(){
         Random r =new Random();
@@ -32,16 +36,29 @@ public class Leikmenn {
         int Bnext=0;
         for (int i=0;i<8;i++) {
             if(i==V){
-                Graen[0]=Leik[i];
+                L.Graen[0]=L.Leik[i][0];
+                L.Leik[i][1]="Úlfur";
+
             }
             else if(i==U){
-                Graen[1]=Leik[i];
+                L.Graen[1]=L.Leik[i][0];
+                L.Leik[i][1]="Vegan";
+
             }
             else {
-                Blar[Bnext]=Leik[i];
+                L.Blar[Bnext]=L.Leik[i][0];
+                L.Leik[i][1]="Alæta";
+
                 ++Bnext;
             }
+            System.out.println("L"+i+L.Leik[i][1]);
         }
+    }
+    public Leikmenn getL() {
+        return L;
+    }
+    public void setL(Leikmenn Leikur) {
+        L = Leikur;
     }
 
     public String[] getBlar() {
@@ -52,22 +69,24 @@ public class Leikmenn {
         return Graen;
     }
 
-    public String[] getLeik() {
+    public String[][] getLeik() {
+        System.out.println("awd"+Leik[1][0] );
         return Leik;
     }
 
     public boolean fullt(){
-        if(NextL == 8){
+        if(L.NextL == 8){
             hlutverk();
+            System.out.println("awwdawdad"+L.Leik[0][0] );
         }//return NextL == 8;
         return true;
 
     }
     public void add(String nafn){
         if(nafn.length()>0){
-            Leik[NextL]=nafn;
-            //System.out.println(Leik[NextL]);
-            NextL++;
+            L.Leik[NextL][0]=nafn;
+            System.out.println(L.Leik[NextL][0]);
+            L.NextL++;
         }
 
     }

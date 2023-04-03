@@ -5,6 +5,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
+
+
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
+
 public class nofnController {
 
     @FXML
@@ -28,9 +35,9 @@ public class nofnController {
     public Leikmenn getLeikur() {
         return Leikur;
     }
-
     public void Next() {
         Leikur =new Leikmenn();
+        Leikur.setL(Leikur);
         Leikur.add(L1.getText());
         Leikur.add(L2.getText());
         Leikur.add(L3.getText());
@@ -39,8 +46,11 @@ public class nofnController {
         Leikur.add(L6.getText());
         Leikur.add(L7.getText());
         Leikur.add(L8.getText());
+       // Leikmenn N=Leikur.getL();
         if(Leikur.fullt()){
             hlutverkController h=new hlutverkController();
+            //System.out.println("Nafn "+ N.Leik[2][0]);
+            h.getL(Leikur.getL());
             ViewSwitcher.switchTo(View.HLUTVERK);
         }
     }
