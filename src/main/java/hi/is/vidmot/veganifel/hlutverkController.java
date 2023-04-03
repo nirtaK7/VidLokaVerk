@@ -46,7 +46,7 @@ public class hlutverkController{
     public void setL(Leikmenn l) {
         L = l;
         Leik=L.getLeik();
-        initialize();
+        //initialize();
         System.out.println("Leik[" +Leik[0][0]);
         //B1.setText(String.valueOf(Leik[0][0]));
 
@@ -66,7 +66,7 @@ public class hlutverkController{
         bList.add(B8);
         for (int i=0;i<bList.size();i++){
             //System.out.println("Leik[" + i + "] = "+Leik[i][0]);
-           // bList.get(i).setText(Leik[i][0]);
+            //bList.get(i).setText(Leik[i][0]);
         }
     }
     public void synaH(ActionEvent actionEvent){

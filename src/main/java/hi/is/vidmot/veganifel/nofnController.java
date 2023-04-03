@@ -31,10 +31,6 @@ public class nofnController {
     @FXML
     private TextField L8;
     public Leikmenn Leikur;
-
-    public Leikmenn getLeikur() {
-        return Leikur;
-    }
     public void Next() {
         Leikur =new Leikmenn();
         Leikur.setL(Leikur);
@@ -46,14 +42,14 @@ public class nofnController {
         Leikur.add(L6.getText());
         Leikur.add(L7.getText());
         Leikur.add(L8.getText());
-       // Leikmenn N=Leikur.getL();
         if(Leikur.fullt()){
-            hlutverkController h=new hlutverkController();
-            //System.out.println("Nafn "+ N.Leik[2][0]);
-            h.setL(Leikur.getL());
-            mainController m=new mainController();
-            m.setL(Leikur.getL());
+            hlutverkController h;
+            mainController m;
             ViewSwitcher.switchTo(View.HLUTVERK);
+            //ViewSwitcher.Lookup(View.HLUTVERK);
+            //ViewSwitcher.Lookup(View.MAIN);
+            //h.setL(Leikur.getL());
+            //m.setL(Leikur);
         }
     }
 }
