@@ -3,7 +3,7 @@ package hi.is.vidmot.veganifel;
 import javafx.collections.ObservableList;
 
 import java.util.Random;
-
+//Katrín
 public class Leikmenn {
     //Katrín
     public String[] Blar;

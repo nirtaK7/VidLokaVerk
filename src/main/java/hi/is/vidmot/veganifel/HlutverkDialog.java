@@ -5,7 +5,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-
+//Katrín
 public class HlutverkDialog extends Dialog<String> {
 
     private static ButtonType OKISL;

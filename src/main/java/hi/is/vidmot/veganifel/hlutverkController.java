@@ -4,7 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-
+//Katrín
 public class hlutverkController{
     @FXML
     private Button B1;
@@ -55,7 +55,7 @@ public class hlutverkController{
         bList.add(B8);
         for (int i=0;i<bList.size();i++){
             //System.out.println("Leik[" + i + "] = "+Leik[i][0]);
-            //bList.get(i).setText(Leik[i][0]);
+           // bList.get(i).setText(Leik[i][0]);
         }
 
 
