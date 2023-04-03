@@ -41,14 +41,14 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Button fx:id="B1" contentDisplay="CENTER" mnemonicParsing="false" text="Button" />
-            <Button fx:id="B2" mnemonicParsing="false" text="Button" GridPane.rowIndex="1" />
-            <Button fx:id="B3" mnemonicParsing="false" text="Button" GridPane.rowIndex="2" />
-            <Button fx:id="B4" mnemonicParsing="false" text="Button" GridPane.rowIndex="3" />
-            <Button fx:id="B5" mnemonicParsing="false" text="Button" GridPane.columnIndex="1" />
-            <Button fx:id="B6" mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="B7" mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="B8" mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="B1" contentDisplay="CENTER" mnemonicParsing="false" onAction="#synaH" text="Button" />
+            <Button fx:id="B2" mnemonicParsing="false" onAction="#synaH" text="Button" GridPane.rowIndex="1" />
+            <Button fx:id="B3" mnemonicParsing="false" onAction="#synaH" text="Button" GridPane.rowIndex="2" />
+            <Button fx:id="B4" mnemonicParsing="false" onAction="#synaH" text="Button" GridPane.rowIndex="3" />
+            <Button fx:id="B5" mnemonicParsing="false" onAction="#synaH" text="Button" GridPane.columnIndex="1" />
+            <Button fx:id="B6" mnemonicParsing="false" onAction="#synaH" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button fx:id="B7" mnemonicParsing="false" onAction="#synaH" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="B8" mnemonicParsing="false" onAction="#synaH" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="3" />
          </children>
       </GridPane>
       <Button mnemonicParsing="false" onAction="#Next" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 30;" text="-&gt;" BorderPane.alignment="CENTER_RIGHT">

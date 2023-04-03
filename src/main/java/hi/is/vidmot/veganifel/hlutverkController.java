@@ -2,8 +2,17 @@ package hi.is.vidmot.veganifel;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.Objects;
+
 //Katrín
 public class hlutverkController{
     @FXML
@@ -27,12 +36,14 @@ public class hlutverkController{
     public Leikmenn L;
     private ObservableList<Button> bList= FXCollections.observableArrayList();
 
+    private static final String ILAGI ="Í lagi";
+
 
     public hlutverkController(){
 
     }
 
-    public void getL(Leikmenn l) {
+    public void setL(Leikmenn l) {
         L = l;
         Leik=L.getLeik();
         initialize();
@@ -57,9 +68,39 @@ public class hlutverkController{
             //System.out.println("Leik[" + i + "] = "+Leik[i][0]);
            // bList.get(i).setText(Leik[i][0]);
         }
-
-
-
+    }
+    public void synaH(ActionEvent actionEvent){
+        //String nafn = ((Button) actionEvent.getSource()).getText();
+        String nafn="a";
+        ButtonType bType = new ButtonType(ILAGI,
+                ButtonBar.ButtonData.OK_DONE);
+        Alert a = stofnaAlert(bType,nafn);
+        a.showAndWait();
+    }
+    private String HlutverkText(String nafn){
+        String vegan="";
+        int x = 0;
+        for(int i =0;i<8;i++){
+            if(Objects.equals(Leik[i][0], nafn)){
+                x=i;
+            }
+        }
+        if(Objects.equals(Leik[x][1], "Úlfur")){
+            for(int i =0;i<Leik.length;i++){
+                if(Leik[i][1]=="Vegan"){
+                    vegan=Leik[i][0];
+                }
+            }
+            return Leik[x][0]+"Í þessum leik ert þú "+Leik[x][1]+"\nMeð þér í liði er Vegan "+vegan;
+        }
+        return Leik[x][0]+"Í þessum leik ert þú "+Leik[x][1];
+    }
+    private Alert stofnaAlert(ButtonType bILagi,String nafn) {
+        String hlutverkT=HlutverkText(nafn);
+        Alert a = new Alert(Alert.AlertType.NONE,  hlutverkT, bILagi);
+        a.setTitle("Vegan í felum");
+        a.setHeaderText("Hlutverkið ");
+        return a;
     }
 
 

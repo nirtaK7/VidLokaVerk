@@ -1,14 +1,20 @@
 package hi.is.vidmot.veganifel;
 
+import javafx.application.Application;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-//Katrín
-public class HlutverkDialog extends Dialog<String> {
+import javafx.stage.Stage;
 
-    private static ButtonType OKISL;
+import java.io.IOException;
+
+//Katrín
+public class HlutverkDialog {
+
+
+   /* private static ButtonType OKISL;
 
     public HlutverkDialog(String L) {
         super();
@@ -36,6 +42,8 @@ public class HlutverkDialog extends Dialog<String> {
         return content;
 
     }
+
+    */
 
 
 }

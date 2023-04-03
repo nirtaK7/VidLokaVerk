@@ -50,7 +50,9 @@ public class nofnController {
         if(Leikur.fullt()){
             hlutverkController h=new hlutverkController();
             //System.out.println("Nafn "+ N.Leik[2][0]);
-            h.getL(Leikur.getL());
+            h.setL(Leikur.getL());
+            mainController m=new mainController();
+            m.setL(Leikur.getL());
             ViewSwitcher.switchTo(View.HLUTVERK);
         }
     }
