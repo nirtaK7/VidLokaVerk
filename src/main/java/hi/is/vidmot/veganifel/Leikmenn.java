@@ -70,14 +70,14 @@ public class Leikmenn {
     }
 
     public String[][] getLeik() {
-        System.out.println("awd"+Leik[1][0] );
+        System.out.println("getLeik "+Leik[1][0] );
         return Leik;
     }
 
     public boolean fullt(){
         if(L.NextL == 8){
             hlutverk();
-            System.out.println("awwdawdad"+L.Leik[0][0] );
+            System.out.println("Fullt "+L.Leik[0][0] );
         }//return NextL == 8;
         return true;
 

@@ -34,21 +34,17 @@ public class hlutverkController{
 
     public String[][] Leik;
     public Leikmenn L;
-    private ObservableList<Button> bList= FXCollections.observableArrayList();
+    private final ObservableList<Button> bList= FXCollections.observableArrayList();
 
     private static final String ILAGI ="Í lagi";
 
-
-    public hlutverkController(){
-
-    }
 
     public void setL(Leikmenn l) {
         L = l;
         Leik=L.getLeik();
         //initialize();
         System.out.println("Leik[" +Leik[0][0]);
-        //B1.setText(String.valueOf(Leik[0][0]));
+        B1.setText(String.valueOf(Leik[0][0]));
 
     }
 
@@ -65,10 +61,11 @@ public class hlutverkController{
         bList.add(B7);
         bList.add(B8);
         for (int i=0;i<bList.size();i++){
-            //System.out.println("Leik[" + i + "] = "+Leik[i][0]);
-            //bList.get(i).setText(Leik[i][0]);
+            System.out.println("Leik[" + i + "] = "+Leik[i][0]);
+            bList.get(i).setText(Leik[i][0]);
         }
     }
+    /*
     public void synaH(ActionEvent actionEvent){
         //String nafn = ((Button) actionEvent.getSource()).getText();
         String nafn="a";
@@ -102,6 +99,7 @@ public class hlutverkController{
         a.setHeaderText("Hlutverkið ");
         return a;
     }
+    */
 
 
 }
