@@ -103,113 +103,37 @@
                <VBox.margin>
                   <Insets top="3.0" />
                </VBox.margin></Label>
-            <HBox alignment="CENTER" prefHeight="28.0" prefWidth="168.0">
-               <children>
-                  <Button fx:id="Ja" mnemonicParsing="false" text="Já">
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin></Button>
-                  <Button fx:id="Nei" mnemonicParsing="false" text="Nei">
-                     <HBox.margin>
-                        <Insets left="5.0" />
-                     </HBox.margin></Button>
-               </children>
-            </HBox>
+            <HBox fx:id="V1" alignment="CENTER" prefHeight="28.0" prefWidth="168.0" />
             <Label fx:id="L2" text="Leikmaður 2">
                <VBox.margin>
                   <Insets top="3.0" />
                </VBox.margin></Label>
-            <HBox alignment="CENTER" prefHeight="26.0" prefWidth="168.0">
-               <children>
-                  <Button fx:id="Ja" mnemonicParsing="false" text="Já">
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin></Button>
-                  <Button fx:id="Nei" mnemonicParsing="false" text="Nei">
-                     <HBox.margin>
-                        <Insets left="5.0" />
-                     </HBox.margin></Button>
-               </children>
-            </HBox>
+            <HBox fx:id="V2" alignment="CENTER" prefHeight="26.0" prefWidth="168.0" />
             <Label fx:id="L3" text="Leikmaður 3">
                <VBox.margin>
                   <Insets top="3.0" />
                </VBox.margin></Label>
-            <HBox alignment="CENTER" prefHeight="27.0" prefWidth="168.0">
-               <children>
-                  <Button fx:id="Ja" mnemonicParsing="false" text="Já">
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin></Button>
-                  <Button fx:id="Nei" mnemonicParsing="false" text="Nei">
-                     <HBox.margin>
-                        <Insets left="5.0" />
-                     </HBox.margin></Button>
-               </children>
-            </HBox>
+            <HBox fx:id="V3" alignment="CENTER" prefHeight="27.0" prefWidth="168.0" />
             <Label fx:id="L4" text="Leikmaður 4">
                <VBox.margin>
                   <Insets top="3.0" />
                </VBox.margin></Label>
-            <HBox alignment="CENTER" prefHeight="26.0" prefWidth="168.0">
-               <children>
-                  <Button fx:id="Ja" mnemonicParsing="false" text="Já">
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin></Button>
-                  <Button fx:id="Nei" mnemonicParsing="false" text="Nei">
-                     <HBox.margin>
-                        <Insets left="5.0" />
-                     </HBox.margin></Button>
-               </children>
-            </HBox>
+            <HBox fx:id="V4" alignment="CENTER" prefHeight="26.0" prefWidth="168.0" />
             <Label fx:id="L5" text="Leikmaður 5">
                <VBox.margin>
                   <Insets top="3.0" />
                </VBox.margin></Label>
-            <HBox alignment="CENTER" prefHeight="27.0" prefWidth="168.0">
-               <children>
-                  <Button fx:id="Ja" mnemonicParsing="false" text="Já">
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin></Button>
-                  <Button fx:id="Nei" mnemonicParsing="false" text="Nei">
-                     <HBox.margin>
-                        <Insets left="5.0" />
-                     </HBox.margin></Button>
-               </children>
-            </HBox>
+            <HBox fx:id="V5" alignment="CENTER" prefHeight="27.0" prefWidth="168.0" />
             <Label fx:id="L6" text="Leikmaður 6">
                <VBox.margin>
                   <Insets top="3.0" />
                </VBox.margin></Label>
-            <HBox alignment="CENTER" prefHeight="27.0" prefWidth="168.0">
-               <children>
-                  <Button fx:id="Ja" mnemonicParsing="false" text="Já">
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin></Button>
-                  <Button fx:id="Nei" mnemonicParsing="false" text="Nei">
-                     <HBox.margin>
-                        <Insets left="5.0" />
-                     </HBox.margin></Button>
-               </children>
-            </HBox>
+            <HBox fx:id="V6" alignment="CENTER" prefHeight="27.0" prefWidth="168.0" />
             <Label fx:id="L7" text="Leikmaður 7">
                <VBox.margin>
                   <Insets top="3.0" />
                </VBox.margin></Label>
-            <HBox alignment="CENTER" prefHeight="26.0" prefWidth="168.0">
-               <children>
-                  <Button fx:id="Ja" mnemonicParsing="false" text="Já">
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin></Button>
-                  <Button fx:id="Nei" mnemonicParsing="false" text="Nei">
-                     <HBox.margin>
-                        <Insets left="5.0" />
-                     </HBox.margin></Button>
-               </children>
+            <HBox fx:id="V7" alignment="CENTER" prefHeight="26.0" prefWidth="168.0">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -218,18 +142,7 @@
                <VBox.margin>
                   <Insets top="3.0" />
                </VBox.margin></Label>
-            <HBox alignment="CENTER" prefHeight="27.0" prefWidth="168.0">
-               <children>
-                  <Button fx:id="Ja" mnemonicParsing="false" text="Já">
-                     <HBox.margin>
-                        <Insets right="5.0" />
-                     </HBox.margin></Button>
-                  <Button fx:id="Nei" mnemonicParsing="false" text="Nei">
-                     <HBox.margin>
-                        <Insets left="5.0" />
-                     </HBox.margin></Button>
-               </children>
-            </HBox>
+            <HBox fx:id="V8" alignment="CENTER" prefHeight="27.0" prefWidth="168.0" />
             <Button fx:id="Draga" mnemonicParsing="false" onAction="#DragaSpil" prefHeight="43.0" prefWidth="180.0" text="Draga Spil">
                <VBox.margin>
                   <Insets top="5.0" />

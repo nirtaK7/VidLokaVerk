@@ -14,7 +14,7 @@
 -fx-border-width:1.5;
 -fx-border-radius:7;
 -fx-background-radius:8;
-
+-fx-alignment: center_left;
 }
 #Nei{
 -fx-background-color:#DFCFCD;
@@ -22,8 +22,8 @@
 -fx-border-width:1.5;
 -fx-border-radius:7;
 -fx-background-radius:8;
+-fx-alignment: center_left;
 }
-
 #Draga{
 -fx-background-color:#CBBA64;
 -fx-border-color:Black;
