@@ -44,17 +44,15 @@ public class nofnController {
         Leikur.add(L8.getText());
         if(Leikur.fullt()){
 
-            ViewSwitcher.lookup(View.HLUTVERK);
-            ViewSwitcher.lookup(View.MAIN);
-            hlutverkController h;
-            mainController m;
-            h = (hlutverkController) ViewSwitcher.lookup (View.HLUTVERK);
-            m = (mainController) ViewSwitcher.lookup (View.MAIN);
-            if(h!=null){
-                h.setL(Leikur);
-                m.setL(Leikur);
-                ViewSwitcher.switchTo(View.HLUTVERK);
-            }
+            //ViewSwitcher.lookup(View.HLUTVERK);
+            //ViewSwitcher.lookup(View.MAIN);
+
+            hlutverkController h = (hlutverkController) ViewSwitcher.lookup(View.HLUTVERK);
+            mainController m = (mainController) ViewSwitcher.lookup(View.MAIN);
+            h.setL(Leikur);
+            m.setL(Leikur);
+            ViewSwitcher.switchTo(View.HLUTVERK);
+
 
         }
     }
