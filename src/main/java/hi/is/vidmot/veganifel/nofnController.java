@@ -1,16 +1,8 @@
 package hi.is.vidmot.veganifel;
 
-import javafx.collections.ObservableList;
+import hi.is.vidmot.vinnsla.Leikmenn;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
-
-
-
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
 
 public class nofnController {
 
@@ -49,8 +41,8 @@ public class nofnController {
 
             hlutverkController h = (hlutverkController) ViewSwitcher.lookup(View.HLUTVERK);
             mainController m = (mainController) ViewSwitcher.lookup(View.MAIN);
-            h.setL(Leikur);
-            m.setL(Leikur);
+            //h.setL(Leikur);
+            //m.setL(Leikur);
             ViewSwitcher.switchTo(View.HLUTVERK);
 
 

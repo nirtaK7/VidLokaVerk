@@ -1,4 +1,4 @@
-package hi.is.vidmot.veganifel;
+package hi.is.vidmot.vinnsla;
 
 import java.util.Random;
 

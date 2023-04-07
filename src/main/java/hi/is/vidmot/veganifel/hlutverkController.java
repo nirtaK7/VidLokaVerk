@@ -1,17 +1,10 @@
 package hi.is.vidmot.veganifel;
 
+import hi.is.vidmot.vinnsla.Leikmenn;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonBar;
-import javafx.scene.control.ButtonType;
-import javafx.stage.Stage;
-
-import java.io.IOException;
-import java.util.Objects;
 
 //Katrín
 public class hlutverkController{

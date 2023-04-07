@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER_RIGHT" prefHeight="600.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.is.vidmot.veganifel.nofnController">
+<VBox alignment="CENTER_RIGHT" prefHeight="600.0" prefWidth="870.0" stylesheets="@ingangur.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.is.vidmot.veganifel.nofnController">
    <children>
       <MenuBar prefHeight="25.0" prefWidth="633.0">
         <menus>
@@ -43,7 +43,7 @@
             <TextField fx:id="L6" GridPane.columnIndex="3" GridPane.rowIndex="1" />
             <TextField fx:id="L7" GridPane.columnIndex="3" GridPane.rowIndex="2" />
             <TextField fx:id="L8" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="71.0" text="Leikmaður 1" />
+            <Label contentDisplay="CENTER" prefHeight="20.0" prefWidth="79.0" text="Leikmaður 1" />
             <Label text="Leikmaður 2" GridPane.rowIndex="1" />
             <Label text="Leikmaður 3" GridPane.rowIndex="2" />
             <Label text="Leikmaður 4" GridPane.rowIndex="3" />

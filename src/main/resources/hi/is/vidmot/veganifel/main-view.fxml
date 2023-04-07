@@ -99,10 +99,13 @@
       <VBox fx:id="Vote" alignment="CENTER" prefHeight="485.0" prefWidth="210.0" style="-fx-padding: 10; -fx-border-color: Black; -fx-border-width: 5;" BorderPane.alignment="CENTER">
          <children>
             <Label alignment="CENTER" prefHeight="20.0" prefWidth="179.0" text="Treysti þið þeim í verkefnið?" />
-            <Label fx:id="L1" prefWidth="76.0" text="Leikmaður 1">
+            <Label fx:id="L1" text="Leikmaður 1">
                <VBox.margin>
                   <Insets top="3.0" />
-               </VBox.margin></Label>
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
             <HBox fx:id="V1" alignment="CENTER" prefHeight="28.0" prefWidth="168.0" />
             <Label fx:id="L2" text="Leikmaður 2">
                <VBox.margin>

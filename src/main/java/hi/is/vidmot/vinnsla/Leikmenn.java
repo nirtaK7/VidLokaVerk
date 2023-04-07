@@ -1,7 +1,4 @@
-package hi.is.vidmot.veganifel;
-
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+package hi.is.vidmot.vinnsla;
 
 import java.util.Random;
 //Katrín
@@ -80,9 +77,7 @@ public class Leikmenn {
         if(L.NextL == 8){
             hlutverk();
             System.out.println("Fullt "+L.Leik[0][0] );
-        }//return NextL == 8;
-        return true;
-
+        }return NextL == 8;
     }
     public void add(String nafn){
         if(nafn.length()>0){

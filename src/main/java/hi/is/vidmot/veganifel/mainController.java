@@ -1,14 +1,10 @@
 package hi.is.vidmot.veganifel;
 
+import hi.is.vidmot.vinnsla.Leikmenn;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 
 import java.util.Objects;
@@ -18,54 +14,6 @@ public class mainController {
     private ComboBox fxListRitara;
     @FXML
     private Label fxTextVerk;
-    public String[] verkstjor;
-    public Leikmenn L;
-    public int rod=0;
-
-    public mainController(){
-        //verkstjor=L.Leik[0];
-        String[] v = {"Anna", "B", "C", "D", "E", "F", "DW", "y"};
-        verkstjor= v;
-    }
-
-    public void setL(Leikmenn l) {
-        L = l;
-        System.out.println("SetL");
-    }
-
-    public void DragaSpil() {
-        fxListRitara.setItems(null);
-        if (nidurstodur()){
-            ViewSwitcher.switchTo(View.VERKS);
-
-
-        }kosningar();
-        fxTextVerk.setText(verkefnastjori());
-    }
-
-    public String verkefnastjori(){
-        String v = verkstjor[rod];
-        rod++;
-        if(rod==8){
-            rod=0;
-        }
-        ritaraL(v);
-        return v+" er verkefnastjóri. "+v +" velur ";
-    }
-    public void ritaraL(String v){
-        int t=0;
-        ObservableList<String> s = FXCollections.observableArrayList();
-        for(int i =0;i<verkstjor.length;i++){
-            if(!Objects.equals(verkstjor[i], v)){
-                s.add(verkstjor[i]);
-            }
-        }
-        fxListRitara.setItems(s);
-    }
-    public void initialize() {
-        fxTextVerk.setText(verkefnastjori());
-        kosningar();
-    }
     @FXML
     public HBox V1;
     @FXML
@@ -82,8 +30,77 @@ public class mainController {
     public HBox V7;
     @FXML
     public HBox V8;
-public int t;
+    @FXML
+    public Label L1;
+    @FXML
+    public Label L2;
+    @FXML
+    public Label L3;
+    @FXML
+    public Label L4;
+    @FXML
+    public Label L5;
+    @FXML
+    public Label L6;
+    @FXML
+    public Label L7;
+    @FXML
+    public Label L8;
+    public ObservableList<String> nofnLeikmanna = FXCollections.observableArrayList();
+    public Leikmenn L;
+    public int rod=0;
+    private int j=0;
+    private int n=0;
+    public void setL(Leikmenn l) {
+        L = l;
+        System.out.println("SetL");
+    }
+    public void setLabel() {
+        ObservableList<Label> L=FXCollections.observableArrayList();
+        L.add(L1);
+        L.add(L2);
+        L.add(L3);
+        L.add(L4);
+        L.add(L5);
+        L.add(L6);
+        L.add(L7);
+        L.add(L8);
+        for (int i=0; i<L.size();i++){
+            Label x= L.get(i);
+            x.setText(nofnLeikmanna.get(i));
+        }
+    }
+    public void initialize() {
+        String[] v = {"Anna", "B", "C", "D", "E", "F", "Hundur", "y"};
+        nofnLeikmanna.addAll(v);
+        //String[][] b =L.getLeik();
+        //verkstjor.addAll(b[0]);
+        System.out.println("SetL");
+        verkefnastjori();
+        setLabel();
+        kosningar();
+    }
+    public void verkefnastjori(){
+        String v = nofnLeikmanna.get(rod);
+        ritaraListi(v);
+        rod++;
+        if(rod==8){
+            rod=0;
+        }
+        fxTextVerk.setText( v+" er verkefnastjóri. "+v +" velur ");
+    }
+    public void ritaraListi(String v){
+        ObservableList<String> s = FXCollections.observableArrayList();
+        for(String a:nofnLeikmanna){
+            if(!Objects.equals(a, v)){
+                s.add(a);
+            }
+        }
+        fxListRitara.setItems(s);
+    }
    public void kosningar(){
+       j=0;
+       n=0;
        ObservableList<HBox> kos=FXCollections.observableArrayList();
        kos.add(V1);
        kos.add(V2);
@@ -103,20 +120,54 @@ public int t;
            Button nei = new Button("Nei");
            nei.setId("Nei");
            ja.setOnAction(e -> {
-               plus();
+               j++;
                h.getChildren().removeAll(ja,nei);
            });
            nei.setOnAction(e -> {
+               n++;
                h.getChildren().removeAll(ja,nei);
            });
            h.getChildren().addAll(ja, nei);
        }
     }
-    public void plus(){
-        t++;
+    public void fjoldiatkvaeda(boolean boo){
+        ButtonType bType = new ButtonType("Í lagi",
+                ButtonBar.ButtonData.OK_DONE);
+        String text;
+        if(!boo){
+            text="Það þrufa allir að fá að kjósa áður en að spil er dregið.";
+        }
+        else {
+            text="Meiri hlutinn kaus gegn því að leifa verkstjóranum og ritaranum að leggja niður spil.\nNú er komin nýr verkstjóri sem má velja sér ritara.";
+        }
+        Alert a = DragaSpilAlert(bType,text);
+        a.showAndWait();
     }
-    public boolean nidurstodur(){
-        return t>3;
-}
+    public void DragaSpil() {
+        if(j+n!=8){
+            fjoldiatkvaeda(false);
+            return;
+        }
+        if(n>3){
+            fjoldiatkvaeda(true);
+            DragaSpilinitialize();
+            return;
+        }
+        DragaSpilinitialize();
+        ViewSwitcher.switchTo(View.VERKS);
+    }
+    public void DragaSpilinitialize(){
+        fxListRitara.setItems(null);
+        kosningar();
+        verkefnastjori();
 
     }
+    private Alert DragaSpilAlert(ButtonType bILagi,String text) {
+        String n="";
+        Alert a = new Alert(Alert.AlertType.NONE,  n, bILagi);
+        a.setHeaderText(text);
+        return a;
+    }
+
+    }
+
