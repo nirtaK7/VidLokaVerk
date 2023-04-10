@@ -14,8 +14,7 @@ public class MultipleViewsApp extends Application {
         var scene = new Scene(new Pane());
 
         ViewSwitcher.setScene(scene);
-        ViewSwitcher.switchTo(View.MAIN);
-
+        ViewSwitcher.switchTo(View.NOFN);
         stage.setScene(scene);
         stage.show();
     }

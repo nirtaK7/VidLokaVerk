@@ -9,6 +9,9 @@ import javafx.scene.layout.HBox;
 
 import java.util.Objects;
 
+/*
+    Katrín
+ */
 public class mainController {
     @FXML
     private ComboBox fxListRitara;
@@ -47,14 +50,15 @@ public class mainController {
     @FXML
     public Label L8;
     public ObservableList<String> nofnLeikmanna = FXCollections.observableArrayList();
+    public String[] Leik;
     public Leikmenn L;
     public int rod=0;
     private int j=0;
     private int n=0;
     public void setL() {
-        nofnController nofnController=(nofnController) ViewSwitcher.lookup(View.MAIN);
-        L = nofnController.getLeikur();
-        System.out.println("SetL");
+        hlutverkController hlutverkController=(hlutverkController) ViewSwitcher.lookup(View.HLUTVERK);
+        L = hlutverkController.getLeikur();
+        Leik=L.getNofn();
     }
     public void setLabel() {
         ObservableList<Label> L=FXCollections.observableArrayList();
@@ -72,11 +76,8 @@ public class mainController {
         }
     }
     public void initialize() {
-        String[] v = {"Anna", "B", "C", "D", "E", "F", "Hundur", "y"};
-        nofnLeikmanna.addAll(v);
-        //String[][] b =L.getLeik();
-        //verkstjor.addAll(b[0]);
-        System.out.println("SetL");
+        setL();
+        nofnLeikmanna.addAll(Leik);
         verkefnastjori();
         setLabel();
         kosningar();

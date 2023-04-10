@@ -2,8 +2,13 @@ package hi.is.vidmot.veganifel;
 
 import hi.is.vidmot.vinnsla.Leikmenn;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
-
+/*
+    Katrín
+ */
 public class nofnController {
 
     @FXML
@@ -39,21 +44,17 @@ public class nofnController {
         Leikur.add(L8.getText());
 
         if(Leikur.fullt()){
-            ViewSwitcher.switchTo(View.HLUTVERK);
-            //ViewSwitcher.lookup(View.HLUTVERK);
-
-
-            /*hlutverkController h=new hlutverkController();
-            mainController m= new mainController();
-
-
-            m = (mainController) ViewSwitcher.lookup(View.MAIN);
             ViewSwitcher.lookup(View.HLUTVERK);
-            ViewSwitcher.lookup(View.MAIN);
-            h.setL(Leikur);
-            m.setL(Leikur);
+            ViewSwitcher.switchTo(View.HLUTVERK);
+        }
+        else {
+                ButtonType bType = new ButtonType("Í lagi",
+                    ButtonBar.ButtonData.OK_DONE);
+                Alert a = new Alert(Alert.AlertType.NONE,  "Það verðru að setja inn nöfn allra\nleikmanna áður en haldið er áfram", bType);
+                a.setTitle("Vegan í felum");
+            a.showAndWait();
 
-             */
         }
     }
+
 }

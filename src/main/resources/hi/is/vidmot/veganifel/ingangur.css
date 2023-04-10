@@ -3,3 +3,7 @@
  -fx-background-size: cover;
  -fx-font-size: 14px;
 }
+#Hlutverk .button{
+    -fx-padding: 10px;
+    -fx-background-radius: 5px;
+}

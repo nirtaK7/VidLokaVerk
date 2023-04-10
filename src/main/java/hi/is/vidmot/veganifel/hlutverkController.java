@@ -12,7 +12,9 @@ import javafx.scene.control.ButtonType;
 
 import java.util.Objects;
 
-//Katrín
+/*
+    Katrín
+ */
 public class hlutverkController{
     @FXML
     private Button B1;
@@ -37,22 +39,20 @@ public class hlutverkController{
 
     private static final String ILAGI ="Í lagi";
 
-
-    public void setL(Leikmenn l) {
-        nofnController nofnController=(nofnController) ViewSwitcher.lookup(View.MAIN);
+    public void Next() {
+        ViewSwitcher.switchTo(View.MAIN);
+    }
+    public void setL() {
+        nofnController nofnController=(nofnController) ViewSwitcher.lookup(View.NOFN);
         L = nofnController.getLeikur();
         Leik=L.getLeik();
-        //initialize();
-        System.out.println("Leik[" +Leik[0][0]);
         B1.setText(String.valueOf(Leik[0][0]));
 
     }
 
-    public void Next() {
-        ViewSwitcher.switchTo(View.MAIN);
-    }
-    public void initialize() {
 
+    public void initialize() {
+        setL();
         bList.add(B1);
         bList.add(B2);
         bList.add(B3);
@@ -61,17 +61,13 @@ public class hlutverkController{
         bList.add(B6);
         bList.add(B7);
         bList.add(B8);
-   /*     for (int i=0;i<bList.size();i++){
-            System.out.println("Leik[" + i + "] = "+Leik[i][0]);
+       for (int i=0;i<bList.size();i++){
             bList.get(i).setText(Leik[i][0]);
         }
-
-    */
     }
 
-  /*  public void synaH(ActionEvent actionEvent){
-        //String nafn = ((Button) actionEvent.getSource()).getText();
-        String nafn="a";
+    public void synaH(ActionEvent actionEvent){
+        String nafn = ((Button) actionEvent.getSource()).getText();
         ButtonType bType = new ButtonType(ILAGI,
                 ButtonBar.ButtonData.OK_DONE);
         Alert a = stofnaAlert(bType,nafn);
@@ -87,24 +83,24 @@ public class hlutverkController{
         }
         if(Objects.equals(Leik[x][1], "Úlfur")){
             for(int i =0;i<Leik.length;i++){
-                if(Leik[i][1]=="Vegan"){
+                if(Objects.equals(Leik[i][1], "Vegan")){
                     vegan=Leik[i][0];
                 }
             }
-            return Leik[x][0]+"Í þessum leik ert þú "+Leik[x][1]+"\nMeð þér í liði er Vegan "+vegan;
+            return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna grænum spilum "+"\nMeð þér í liði er " +vegan +" sem er Vegan ";
         }
-        return Leik[x][0]+"Í þessum leik ert þú "+Leik[x][1];
+        if(Objects.equals(Leik[x][1], "Vegan")){
+            return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna grænum spilum";
+        }
+
+        return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna bláum spilum";
     }
     private Alert stofnaAlert(ButtonType bILagi,String nafn) {
-        String hlutverkT=HlutverkText(nafn);
-        Alert a = new Alert(Alert.AlertType.NONE,  hlutverkT, bILagi);
+        Alert a = new Alert(Alert.AlertType.NONE,  HlutverkText(nafn), bILagi);
         a.setTitle("Vegan í felum");
-        a.setHeaderText("Hlutverkið ");
         return a;
     }
-
-   */
-
-
-
+    public Leikmenn getLeikur() {
+        return L;
+    }
 }

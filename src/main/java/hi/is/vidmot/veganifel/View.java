@@ -6,7 +6,7 @@ package hi.is.vidmot.veganifel;
 public enum View {
 
     NOFN("nofn-view.fxml"),
-    HLUTVERK("hlutverk-view.fxml"),
+    HLUTVERK("Shlutverk-view.fxml"),
     MAIN("main-view.fxml"),
     VERKS("verkefnastjori-view.fxml"),
     RITARI("ritari-view.fxml");

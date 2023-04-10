@@ -1,16 +1,18 @@
 package hi.is.vidmot.vinnsla;
 
 import java.util.Random;
-//Katrín
+/*
+    Katrín
+ */
 public class Leikmenn {
-    //Katrín
-
     public String[] Blar;
     public String[] Graen;
     public String[][] Leik;
+    public String[] nofn;
     private int NextL;
     public Leikmenn(){
         Leik=new String[8][2];
+        nofn=new String[8];
         Blar=new String[6];
         Graen=new String[2];
         NextL=0;
@@ -46,7 +48,6 @@ public class Leikmenn {
 
                 ++Bnext;
             }
-            System.out.println("L"+i+Leik[i][1]);
         }
     }
 
@@ -59,20 +60,22 @@ public class Leikmenn {
     }
 
     public String[][] getLeik() {
-        System.out.println("getLeik "+Leik[1][0] );
         return Leik;
+    }
+
+    public String[] getNofn() {
+        return nofn;
     }
 
     public boolean fullt(){
         if(NextL == 8){
             hlutverk();
-            System.out.println("Fullt "+Leik[0][0] );
         }return NextL == 8;
     }
     public void add(String nafn){
         if(nafn.length()>0){
+            nofn[NextL]=nafn;
             Leik[NextL][0]=nafn;
-            System.out.println(Leik[NextL][0]);
             NextL++;
         }
 
