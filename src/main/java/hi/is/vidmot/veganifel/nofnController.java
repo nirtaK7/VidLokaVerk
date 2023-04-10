@@ -23,9 +23,12 @@ public class nofnController {
     @FXML
     private TextField L8;
     public Leikmenn Leikur;
+    public Leikmenn getLeikur() {
+        return Leikur;
+    }
+
     public void Next() {
         Leikur =new Leikmenn();
-        Leikur.setL(Leikur);
         Leikur.add(L1.getText());
         Leikur.add(L2.getText());
         Leikur.add(L3.getText());
@@ -34,18 +37,23 @@ public class nofnController {
         Leikur.add(L6.getText());
         Leikur.add(L7.getText());
         Leikur.add(L8.getText());
+
         if(Leikur.fullt()){
-
-            //ViewSwitcher.lookup(View.HLUTVERK);
-            //ViewSwitcher.lookup(View.MAIN);
-
-            hlutverkController h = (hlutverkController) ViewSwitcher.lookup(View.HLUTVERK);
-            mainController m = (mainController) ViewSwitcher.lookup(View.MAIN);
-            //h.setL(Leikur);
-            //m.setL(Leikur);
             ViewSwitcher.switchTo(View.HLUTVERK);
+            //ViewSwitcher.lookup(View.HLUTVERK);
 
 
+            /*hlutverkController h=new hlutverkController();
+            mainController m= new mainController();
+
+
+            m = (mainController) ViewSwitcher.lookup(View.MAIN);
+            ViewSwitcher.lookup(View.HLUTVERK);
+            ViewSwitcher.lookup(View.MAIN);
+            h.setL(Leikur);
+            m.setL(Leikur);
+
+             */
         }
     }
 }

@@ -3,8 +3,14 @@ package hi.is.vidmot.veganifel;
 import hi.is.vidmot.vinnsla.Leikmenn;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
+
+import java.util.Objects;
 
 //Katrín
 public class hlutverkController{
@@ -33,7 +39,8 @@ public class hlutverkController{
 
 
     public void setL(Leikmenn l) {
-        L = l;
+        nofnController nofnController=(nofnController) ViewSwitcher.lookup(View.MAIN);
+        L = nofnController.getLeikur();
         Leik=L.getLeik();
         //initialize();
         System.out.println("Leik[" +Leik[0][0]);
@@ -45,6 +52,7 @@ public class hlutverkController{
         ViewSwitcher.switchTo(View.MAIN);
     }
     public void initialize() {
+
         bList.add(B1);
         bList.add(B2);
         bList.add(B3);
@@ -53,13 +61,15 @@ public class hlutverkController{
         bList.add(B6);
         bList.add(B7);
         bList.add(B8);
-        for (int i=0;i<bList.size();i++){
+   /*     for (int i=0;i<bList.size();i++){
             System.out.println("Leik[" + i + "] = "+Leik[i][0]);
             bList.get(i).setText(Leik[i][0]);
         }
+
+    */
     }
-    /*
-    public void synaH(ActionEvent actionEvent){
+
+  /*  public void synaH(ActionEvent actionEvent){
         //String nafn = ((Button) actionEvent.getSource()).getText();
         String nafn="a";
         ButtonType bType = new ButtonType(ILAGI,
@@ -92,7 +102,9 @@ public class hlutverkController{
         a.setHeaderText("Hlutverkið ");
         return a;
     }
-    */
+
+   */
+
 
 
 }

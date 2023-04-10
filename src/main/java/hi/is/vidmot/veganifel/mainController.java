@@ -51,8 +51,9 @@ public class mainController {
     public int rod=0;
     private int j=0;
     private int n=0;
-    public void setL(Leikmenn l) {
-        L = l;
+    public void setL() {
+        nofnController nofnController=(nofnController) ViewSwitcher.lookup(View.MAIN);
+        L = nofnController.getLeikur();
         System.out.println("SetL");
     }
     public void setLabel() {
@@ -135,10 +136,10 @@ public class mainController {
                 ButtonBar.ButtonData.OK_DONE);
         String text;
         if(!boo){
-            text="Það þrufa allir að fá að kjósa áður en að spil er dregið.";
+            text="Það þurfa allir að fá að kjósa áður en að spil er dregið.";
         }
         else {
-            text="Meiri hlutinn kaus gegn því að leifa verkstjóranum og ritaranum að leggja niður spil.\nNú er komin nýr verkstjóri sem má velja sér ritara.";
+            text="Meirihlutinn kaus gegn því að leyfa verkefnastjóranum og ritaranum að leggja niður spil.\nNú er kominn nýr verkefnastjóri sem má velja sér ritara.";
         }
         Alert a = DragaSpilAlert(bType,text);
         a.showAndWait();
