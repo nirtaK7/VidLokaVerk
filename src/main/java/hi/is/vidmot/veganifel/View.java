@@ -9,7 +9,8 @@ public enum View {
     HLUTVERK("Shlutverk-view.fxml"),
     MAIN("main-view.fxml"),
     VERKS("verkefnastjori-view.fxml"),
-    RITARI("ritari-view.fxml");
+    RITARI("ritari-view.fxml"),
+    REGLUR("reglur-view.fxml");
 
 
     private String fileName;
