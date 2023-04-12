@@ -57,4 +57,9 @@ public class nofnController {
         }
     }
 
+    public void reglurnar() {
+        ViewSwitcher.switchTo(View.NOFNREGLUR);
+    }
+
 }
+

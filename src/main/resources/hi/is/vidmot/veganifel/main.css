@@ -35,12 +35,12 @@
 -fx-background-color:#DFE6E9;
 }
 #Blar{
--fx-background-image: url('../Myndir/Smidur.jpg');
+-fx-background-image: url('../Myndir/Spil/Smidur.jpg');
     -fx-background-size: contain;
     -fx-background-position: center;
 }
 #Gaen{
--fx-background-image: url('../Myndir/Krakkar.jpg');
+-fx-background-image: url('../Myndir/Spil/Krakkar.jpg');
     -fx-background-size: contain;
     -fx-background-position: center;
 }

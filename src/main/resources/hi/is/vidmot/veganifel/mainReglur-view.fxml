@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="728.0" style="-fx-background-radius: 30;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hi.is.vidmot.veganifel.mainReglurController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="740.0" text="Reglur">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Það er verkefnastjórinn sem að velja einhvern af leikmönnunum sem ritari sinn, þeir leikmenn sem að eru eftir kjósa hvort að þeir treysta þeim til þess að velja spil fyrir alæturnar. Til þess að halda áfram þá þarf meirihlutinn að kjósa &quot;já&quot;, ef að það gerist ekki þá er annar verkefnastjóri og hann velur annan ritari. Ef haldið er áfram þá fá verkefnastjórinn og ritarinn að velja spil sem að er síðan lagt niður á borðið. Fyrsti hópurinn til að fá 7 spil niður á borðið vinna. Vegan og Úlfur eru að safna grænum spilum, alætur eru að safna bláum spilum" textAlignment="CENTER" wrappingWidth="728.13671875">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <AnchorPane prefHeight="101.0" prefWidth="728.0">
+         <children>
+            <Button layoutX="660.0" layoutY="26.0" mnemonicParsing="false" onAction="#Next" prefHeight="49.0" prefWidth="53.0" style="-fx-background-radius: 30;" text="-&gt;" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

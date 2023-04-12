@@ -49,8 +49,6 @@ public class mainController {
     public Label L7;
     @FXML
     public Label L8;
-    @FXML
-    private Label fxReglur;
     public ObservableList<String> nofnLeikmanna = FXCollections.observableArrayList();
     public String[] Leik;
     public Leikmenn L;
@@ -173,7 +171,7 @@ public class mainController {
         return a;
     }
     public void reglurnar() {
-        ViewSwitcher.switchTo(View.REGLUR);
+        ViewSwitcher.switchTo(View.MAINREGLUR);
     }
 
     }

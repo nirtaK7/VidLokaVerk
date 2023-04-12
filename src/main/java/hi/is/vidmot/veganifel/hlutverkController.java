@@ -103,4 +103,9 @@ public class hlutverkController{
     public Leikmenn getLeikur() {
         return L;
     }
+    public void reglurnar() {
+        ViewSwitcher.switchTo(View.HLUTVERKREGLUR);
+    }
+
 }
+
