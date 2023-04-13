@@ -74,26 +74,26 @@ public class hlutverkController{
         a.showAndWait();
     }
     private String HlutverkText(String nafn){
-        String vegan="";
+        String kind="";
         int x = 0;
         for(int i =0;i<8;i++){
             if(Objects.equals(Leik[i][0], nafn)){
                 x=i;
             }
         }
-        if(Objects.equals(Leik[x][1], "Úlfur")){
+        if(Objects.equals(Leik[x][1], "vegan")){
             for(int i =0;i<Leik.length;i++){
-                if(Objects.equals(Leik[i][1], "Vegan")){
-                    vegan=Leik[i][0];
+                if(Objects.equals(Leik[i][1], "kind")){
+                    kind=Leik[i][0];
                 }
             }
-            return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna grænum spilum "+"\nMeð þér í liði er " +vegan +" sem er Vegan ";
+            return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna grænum spilum "+"\nMeð þér í liði er " +kind +" sem er kind ";
         }
-        if(Objects.equals(Leik[x][1], "Vegan")){
+        if(Objects.equals(Leik[x][1], "kind")){
             return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna grænum spilum";
         }
 
-        return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna bláum spilum";
+        return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna rauðum spilum";
     }
     private Alert stofnaAlert(ButtonType bILagi,String nafn) {
         Alert a = new Alert(Alert.AlertType.NONE,  HlutverkText(nafn), bILagi);
