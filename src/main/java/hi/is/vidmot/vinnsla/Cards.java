@@ -1,5 +1,7 @@
 package hi.is.vidmot.vinnsla;
 
+import javafx.scene.image.Image;
+
 import java.util.Random;
 
 //Hér er allt sem tngeist spilunum
@@ -8,13 +10,15 @@ public class Cards {
     public Cards(){
         drogurS=new Cards[3];
     }
-    public String RandomCard(){
+    public Image RandomCard(){
         Random r =new Random();
         int x = r.nextInt(100);
+        Image a=new Image("@../Myndir/Spil/Smidur.jpg");
+        Image b=new Image("@../Myndir/Spil/Krakkar.jpg");
         if(x<33){
-            return "Green";
+            return a;
         }
-        return "Blue";
+        return b;
     }
     public Cards[] getDrogurS() {
         return drogurS;
