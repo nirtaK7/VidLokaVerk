@@ -174,7 +174,8 @@ public class mainController {
     public void reglurnar() {
         ViewSwitcher.switchTo(View.MAINREGLUR);
     }
-
+    public void tilBaka(){ViewSwitcher.switchTo(View.HLUTVERK);}
     }
+
 
 

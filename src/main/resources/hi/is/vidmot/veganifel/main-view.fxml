@@ -14,6 +14,11 @@
               <MenuItem mnemonicParsing="false" onAction="#reglurnar" text="Reglur" />
             </items>
           </Menu>
+          <Menu mnemonicParsing="false" text="Til baka">
+                      <items>
+                        <MenuItem mnemonicParsing="false" onAction="#tilBaka" text="sjá hlutverk" />
+                      </items>
+                    </Menu>
         </menus>
       </MenuBar>
    </top>
