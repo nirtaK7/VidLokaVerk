@@ -44,7 +44,7 @@
                   <Button fx:id="B8" mnemonicParsing="false" onAction="#synaH" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                </children>
             </GridPane>
-            <Button mnemonicParsing="false" onAction="#Next" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 30;" text="-&gt;">
+            <Button mnemonicParsing="false" onAction="#Next" prefHeight="70.0" prefWidth="60.0" style="-fx-background-radius: 30;" text="-&gt;">
                <VBox.margin>
                   <Insets bottom="10.0" right="10.0" />
                </VBox.margin>
