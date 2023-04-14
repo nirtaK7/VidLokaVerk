@@ -156,7 +156,6 @@ public class mainController {
             return;
         }
         DragaSpilinitialize();
-        ViewSwitcher.lookup(View.VERKS);
         ViewSwitcher.switchTo(View.VERKS);
     }
     public void DragaSpilinitialize(){

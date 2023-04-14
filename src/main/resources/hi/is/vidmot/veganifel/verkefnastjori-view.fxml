@@ -8,6 +8,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -24,25 +25,37 @@
       </MenuBar>
    </top>
    <center>
-      <VBox fx:id="fxerkefnastjori" alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+      <VBox fx:id="fxerkefnastjori" alignment="CENTER" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="fxbreytaTexta" alignment="CENTER" prefHeight="44.0" prefWidth="484.0" text="Veldu spil sem þú villt ekki gefa ritaranum þínum">
+            <Label fx:id="fxbreytaTexta" alignment="CENTER" prefHeight="44.0" prefWidth="484.0" text="Verkefnastjóri">
                <font>
                   <Font size="21.0" />
                </font>
             </Label>
-            <HBox fx:id="fxSpilaListi" prefHeight="456.0" prefWidth="870.0" />
+            <Label fx:id="text" alignment="TOP_CENTER" prefHeight="100.0" prefWidth="800.0" text="Label">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <HBox fx:id="fxSpilaListi" alignment="CENTER" prefHeight="456.0" prefWidth="870.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></HBox>
          </children>
       </VBox>
    </center>
    <bottom>
-      <Button mnemonicParsing="false" onAction="#Next" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 30;" text="-&gt;" BorderPane.alignment="CENTER_RIGHT">
-         <BorderPane.margin>
-            <Insets bottom="10.0" left="5.0" right="10.0" top="5.0" />
-         </BorderPane.margin>
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font>
-      </Button>
+      <Pane prefHeight="70.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="fxFela" alignment="CENTER" layoutX="379.0" layoutY="12.0" mnemonicParsing="false" onAction="#fela" prefHeight="47.0" prefWidth="112.0" text="Fela Spil">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="700.0" />
+                           </HBox.margin>
+                        </Button>
+         </children>
+      </Pane>
    </bottom>
 </BorderPane>
