@@ -87,13 +87,13 @@ public class hlutverkController{
                     vegan=Leik[i][0];
                 }
             }
-            return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna bláum spilum "+"\nMeð þér í liði er " +vegan +" sem er kind ";
+            return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna grænum spilum "+"\nMeð þér í liði er " +vegan +" sem er úlfur ";
         }
         if(Objects.equals(Leik[x][1], "vegan")){
-            return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna bláum spilum";
+            return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna grænum spilum ";
         }
 
-        return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna rauðum spilum";
+        return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna bláum spilum";
     }
     private Alert stofnaAlert(ButtonType bILagi,String nafn) {
         Alert a = new Alert(Alert.AlertType.NONE,  HlutverkText(nafn), bILagi);
