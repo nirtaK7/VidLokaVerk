@@ -1,21 +1,28 @@
 package hi.is.vidmot.vinnsla;
 
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.util.Random;
 
 //Hér er allt sem tngeist spilunum
 public class Cards {
 
-    public Image RandomCard(){
+    public ImageView RandomCard(){
         Random r =new Random();
         int x = r.nextInt(100);
-        Image a=new Image("@../Myndir/Spil/Blar.jpg");
-        Image b=new Image("@../Myndir/Spil/Graen.jpg");
+        ImageView k=new ImageView();
+        Image a=new Image("file:/../Myndir/Spil/Blar.jpg");
+        Image b = new Image("file:/../Myndir/Spil/Graen.jpg");
         if(x<33){
-            return a;
+            k.setImage(a);
+            k.setId("B");
         }
-        return b;
+        else {
+            k.setImage(b);
+            k.setId("G");
+        }
+        return k;
     }
 
 }

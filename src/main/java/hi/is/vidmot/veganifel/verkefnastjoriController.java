@@ -6,37 +6,45 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 
 public class verkefnastjoriController {
 
     @FXML
-    public VBox S1;
-    @FXML
-    public VBox S2;
-    @FXML
-    public VBox S3;
+    public HBox fxSpilaListi;
+
 
     public void veljaSpil(){
+        VBox S1=new VBox();
+        S1.setId("S1");
+        VBox S2=new VBox();
+        S1.setId("S2");
+        VBox S3=new VBox();
+        S1.setId("S3");
         ObservableList<VBox> Spil= FXCollections.observableArrayList();
         Spil.add(S1);
         Spil.add(S2);
         Spil.add(S3);
+        fxSpilaListi.getChildren().addAll(S1,S2,S3);
 
-        for(VBox v :Spil){
+       for(VBox v :Spil){
             v.getChildren().clear();
             Cards s = new Cards();
-            ImageView i = s.getSpil();
+            ImageView i = s.RandomCard();
             Button velja = new Button("Velja");
-            velja.setId("Velja");
-
+           System.out.println ("AAA");
+           v.getChildren().addAll(i,velja);
+            System.out.println (v.getChildren());
             velja.setOnAction(e ->{
-                v.getChildren().removeAll(i, velja);
-            });
-            v.getChildren().addAll(i,velja);
+               v.getChildren().removeAll(i, velja);
+           });
+
+
         }
     }
+
     public void initialize(){
         veljaSpil();
     }
