@@ -44,3 +44,15 @@
     -fx-background-size: contain;
     -fx-background-position: center;
 }
+
+#B1 , #B2 , #B3 , #B4 , #B5, #B6 , #B7 {
+-fx-background-image: url('../Myndir/Spil/Blar.jpg');
+    -fx-background-size: contain;
+    -fx-background-position: center;
+}
+
+#G1 , #G2 , #G3 , #G4 , #G5, #G6 , #G7 {
+-fx-background-image: url('../Myndir/Spil/Blar.jpg');
+    -fx-background-size: contain;
+    -fx-background-position: center;
+}

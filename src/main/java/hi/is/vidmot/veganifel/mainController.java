@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 
 import java.util.Objects;
 
@@ -55,6 +56,35 @@ public class mainController {
     public int rod=0;
     private int j=0;
     private int n=0;
+    @FXML
+    public Pane B1;
+    @FXML
+    public Pane B2;
+    @FXML
+    public Pane B3;
+    @FXML
+    public Pane B4;
+    @FXML
+    public Pane B5;
+    @FXML
+    public Pane B6;
+    @FXML
+    public Pane B7;
+    @FXML
+    public Pane G1;
+    @FXML
+    public Pane G2;
+    @FXML
+    public Pane G3;
+    @FXML
+    public Pane G4;
+    @FXML
+    public Pane G5;
+    @FXML
+    public Pane G6;
+    @FXML
+    public Pane G7;
+
     public void setL() {
         hlutverkController hlutverkController=(hlutverkController) ViewSwitcher.lookup(View.HLUTVERK);
         L = hlutverkController.getLeikur();
@@ -81,6 +111,7 @@ public class mainController {
         verkefnastjori();
         setLabel();
         kosningar();
+        fela();
     }
     public void verkefnastjori(){
         String v = nofnLeikmanna.get(rod);
@@ -173,8 +204,24 @@ public class mainController {
     public void reglurnar() {
         ViewSwitcher.switchTo(View.MAINREGLUR);
     }
-    public void tilBaka(){ViewSwitcher.switchTo(View.HLUTVERK);}
-    }
+    public void tilBaka(){ ViewSwitcher.switchTo(View.HLUTVERK);}
 
+    public void fela(){
+        B1.setVisible(false);
+        B2.setVisible(false);
+        B3.setVisible(false);
+        B4.setVisible(false);
+        B5.setVisible(false);
+        B6.setVisible(false);
+        B7.setVisible(false);
+        G1.setVisible(false);
+        G2.setVisible(false);
+        G3.setVisible(false);
+        G4.setVisible(false);
+        G5.setVisible(false);
+        G6.setVisible(false);
+        G7.setVisible(false);
+    }
+}
 
 
