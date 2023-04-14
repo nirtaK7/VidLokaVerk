@@ -205,7 +205,9 @@ public class mainController {
         ViewSwitcher.switchTo(View.MAINREGLUR);
     }
     public void tilBaka(){ ViewSwitcher.switchTo(View.HLUTVERK);}
+    public void lagtABord(String s){
 
+    }
     public void fela(){
         B1.setVisible(false);
         B2.setVisible(false);

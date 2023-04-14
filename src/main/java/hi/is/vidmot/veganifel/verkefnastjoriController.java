@@ -43,11 +43,9 @@ public class verkefnastjoriController {
             velja.setOnAction(e ->{
                String a= fxbreytaTexta.getText();
                 if(Objects.equals(a, "Ritari")){
-
                     fxSpilaListi.getChildren().remove(v);
                     Next();
                     initialize();
-
                     return;
                 }
                v.getChildren().removeAll(i, velja);
@@ -61,7 +59,9 @@ public class verkefnastjoriController {
     }
 
     public void Next(){
+        mainController m=(mainController) ViewSwitcher.lookup(View.MAIN);
         String s=fxSpilaListi.getChildren().get(0).getId();
+        m.lagtABord(s);
         ViewSwitcher.switchTo(View.MAIN);
     }
     public void setText(){
