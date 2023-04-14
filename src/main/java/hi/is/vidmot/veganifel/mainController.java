@@ -260,7 +260,7 @@ public class mainController {
         String[] G=L.getGraen();
         String s="Til hamingju ";
         for (String a:v){
-            s=s+"," +a;
+            s=s+a+ ", ";
         }
         s=s+"\nÞið unnuð leikinn!"+"\n"+G[0]+" var vegan og "+G[1]+" var úlfurinn";
         ButtonType bType = new ButtonType("Í lagi" , ButtonBar.ButtonData.OK_DONE);
