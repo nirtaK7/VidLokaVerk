@@ -14,15 +14,13 @@ public class verkefnastjoriController {
 
     @FXML
     public HBox fxSpilaListi;
-
-
     public void veljaSpil(){
         VBox S1=new VBox();
         S1.setId("S1");
         VBox S2=new VBox();
-        S1.setId("S2");
+        S2.setId("S2");
         VBox S3=new VBox();
-        S1.setId("S3");
+        S3.setId("S3");
         ObservableList<VBox> Spil= FXCollections.observableArrayList();
         Spil.add(S1);
         Spil.add(S2);
@@ -32,16 +30,14 @@ public class verkefnastjoriController {
        for(VBox v :Spil){
             v.getChildren().clear();
             Cards s = new Cards();
-            ImageView i = s.RandomCard();
-            Button velja = new Button("Velja");
+           final ImageView i = s.RandomCard();
+           final Button velja = new Button("Velja");
            System.out.println ("AAA");
            v.getChildren().addAll(i,velja);
             System.out.println (v.getChildren());
             velja.setOnAction(e ->{
                v.getChildren().removeAll(i, velja);
            });
-
-
         }
     }
 
