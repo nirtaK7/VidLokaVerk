@@ -8,6 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 
+import java.util.List;
 import java.util.Objects;
 
 /*
@@ -208,21 +209,26 @@ public class mainController {
     public void lagtABord(String s){
 
     }
+
+    public ObservableList<Pane> B = FXCollections.observableArrayList();
+    public ObservableList<Pane> G = FXCollections.observableArrayList();
+
     public void fela(){
-        B1.setVisible(false);
-        B2.setVisible(false);
-        B3.setVisible(false);
-        B4.setVisible(false);
-        B5.setVisible(false);
-        B6.setVisible(false);
-        B7.setVisible(false);
-        G1.setVisible(false);
-        G2.setVisible(false);
-        G3.setVisible(false);
-        G4.setVisible(false);
-        G5.setVisible(false);
-        G6.setVisible(false);
-        G7.setVisible(false);
+        B.add(B1);
+        B.add(B2);
+        B.add(B3);
+        B.add(B4);
+        B.add(B5);
+        B.add(B6);
+        B.add(B7);
+        G.add(G1);
+        G.add(G2);
+        G.add(G3);
+        G.add(G4);
+        G.add(G5);
+        G.add(G6);
+        G.add(G7);
+        B.getChildren()
     }
 }
 
