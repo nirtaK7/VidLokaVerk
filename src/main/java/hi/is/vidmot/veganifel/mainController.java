@@ -262,10 +262,8 @@ public class mainController {
         for (String a:v){
             s=s+"," +a;
         }
-        s=s+"\nÞið unnuð leikinn!"+"\n"+G[0]+"Var vegan og "+G[1]+" var úlfurinn";
-
-        ButtonType bType = new ButtonType("ILAGI" ,
-            ButtonBar.ButtonData.OK_DONE);
+        s=s+"\nÞið unnuð leikinn!"+"\n"+G[0]+" var vegan og "+G[1]+" var úlfurinn";
+        ButtonType bType = new ButtonType("Í lagi" , ButtonBar.ButtonData.OK_DONE);
         Alert a = new Alert(Alert.AlertType.NONE, s, bType);
         a.setTitle("Vegan í felum");
         return a;
