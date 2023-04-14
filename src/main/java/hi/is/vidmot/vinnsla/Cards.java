@@ -15,7 +15,7 @@ public class Cards {
         Image a=new Image(getClass().getResourceAsStream("/hi/is/vidmot/Myndir/Spil/Blar.jpg"));
         Image b=new Image(getClass().getResourceAsStream("/hi/is/vidmot/Myndir/Spil/Graen.jpg"));
 
-        if(x<30){
+        if(x<=30){
             k.setImage(a);
             k.setId("B");
         }

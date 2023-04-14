@@ -218,6 +218,7 @@ public class mainController {
             v=L.getBlar();
             Alert a = Vinna(v);
             a.showAndWait();
+            System.exit(0);
         }
         if (Objects.equals(s, "G")) {
             for (Pane pane : G) {
@@ -229,6 +230,7 @@ public class mainController {
             v=L.getGraen();
             Alert a = Vinna(v);
             a.showAndWait();
+            System.exit(0);
         }
     }
     ObservableList<Pane> B = FXCollections.observableArrayList();
