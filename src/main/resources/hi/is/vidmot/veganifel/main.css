@@ -46,7 +46,7 @@
 }
 
 #B1 , #B2 , #B3 , #B4 , #B5, #B6 , #B0 {
--fx-background-image: url('../Myndir/Spil/Blar.jpg');
+-fx-background-image: url('../Myndir/Spil/Graen.jpg');
     -fx-background-size: contain;
     -fx-background-position: center;
 }

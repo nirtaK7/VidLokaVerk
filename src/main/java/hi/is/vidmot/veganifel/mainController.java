@@ -214,6 +214,8 @@ public class mainController {
                     return;
                 }
             }
+            Alert a = Vinna();
+            a.showAndWait();
         }
         if(Objects.equals(s, "G")){
             for(Pane pane:G){
@@ -222,6 +224,8 @@ public class mainController {
                     return;
                 }
             }
+            Alert a = Vinna();
+            a.showAndWait();
         }
     }
     ObservableList<Pane> B = FXCollections.observableArrayList();
@@ -251,6 +255,17 @@ public class mainController {
             pane.setVisible(false);
         }
     }
+
+    private Alert Vinna() {
+        ButtonType bType = new ButtonType("ILAGI" ,
+            ButtonBar.ButtonData.OK_DONE);
+        Alert a = new Alert(Alert.AlertType.NONE, "", bType);
+        a.setTitle("Vegan í felum");
+        return a;
+
+    }
+
 }
+
 
 
