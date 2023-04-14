@@ -62,8 +62,8 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Pane fx:id="Graen" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
-                        <Pane fx:id="Blar" prefHeight="200.0" prefWidth="200.0" />
+                        <Pane fx:id="G0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                        <Pane fx:id="B0" prefHeight="200.0" prefWidth="200.0" />
                         <Pane fx:id="B1" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
                         <Pane fx:id="G1" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Pane fx:id="B2" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
@@ -76,8 +76,8 @@
                         <Pane fx:id="G5" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
                         <Pane fx:id="B6" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" />
                         <Pane fx:id="G6" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                        <Pane fx:id="B7" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" />
-                        <Pane fx:id="G7" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
                      </children>
                   </GridPane>
                </children>

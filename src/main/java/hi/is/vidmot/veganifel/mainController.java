@@ -70,7 +70,7 @@ public class mainController {
     @FXML
     public Pane B6;
     @FXML
-    public Pane B7;
+    public Pane B0;
     @FXML
     public Pane G1;
     @FXML
@@ -84,7 +84,7 @@ public class mainController {
     @FXML
     public Pane G6;
     @FXML
-    public Pane G7;
+    public Pane G0;
 
     public void setL() {
         hlutverkController hlutverkController=(hlutverkController) ViewSwitcher.lookup(View.HLUTVERK);
@@ -207,28 +207,49 @@ public class mainController {
     }
     public void tilBaka(){ ViewSwitcher.switchTo(View.HLUTVERK);}
     public void lagtABord(String s){
-
+        if(Objects.equals(s, "B")){
+            for(Pane pane:B){
+                if(!pane.isVisible()){
+                    pane.setVisible(true);
+                    return;
+                }
+            }
+        }
+        if(Objects.equals(s, "G")){
+            for(Pane pane:G){
+                if(!pane.isVisible()){
+                    pane.setVisible(true);
+                    return;
+                }
+            }
+        }
     }
+    ObservableList<Pane> B = FXCollections.observableArrayList();
+    ObservableList<Pane> G = FXCollections.observableArrayList();
 
-    public ObservableList<Pane> B = FXCollections.observableArrayList();
-    public ObservableList<Pane> G = FXCollections.observableArrayList();
 
     public void fela(){
+        B.add(B0);
         B.add(B1);
         B.add(B2);
         B.add(B3);
         B.add(B4);
         B.add(B5);
         B.add(B6);
-        B.add(B7);
+        G.add(G0);
         G.add(G1);
         G.add(G2);
         G.add(G3);
         G.add(G4);
         G.add(G5);
         G.add(G6);
-        G.add(G7);
-        B.getChildren()
+
+        for(Pane pane:B){
+            pane.setVisible(false);
+        }
+        for(Pane pane:G){
+            pane.setVisible(false);
+        }
     }
 }
 
