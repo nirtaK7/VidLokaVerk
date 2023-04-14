@@ -13,7 +13,8 @@ public enum View {
     RITARI("ritari-view.fxml"),
     MAINREGLUR("mainReglur-view.fxml"),
     NOFNREGLUR("nofnReglur-view.fxml"),
-    HLUTVERKREGLUR("hlutverkReglur-view.fxml");
+    HLUTVERKREGLUR("hlutverkReglur-view.fxml"),
+    Saga("saga-view.fxml");
 
 
 

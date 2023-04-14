@@ -13,8 +13,8 @@ public class Cards {
     public Image RandomCard(){
         Random r =new Random();
         int x = r.nextInt(100);
-        Image a=new Image("@../Myndir/Spil/Smidur.jpg");
-        Image b=new Image("@../Myndir/Spil/Krakkar.jpg");
+        Image a=new Image("@../Myndir/Spil/Blar.jpg");
+        Image b=new Image("@../Myndir/Spil/Graen.jpg");
         if(x<33){
             return a;
         }

@@ -1,5 +1,5 @@
 .root{
--fx-background-image: url('../Myndir/Bord2.jpg');
+-fx-background-image: url('../Myndir/Bord.jpg');
  -fx-background-size: cover;
  -fx-font-size: 14px;
 }
@@ -35,11 +35,11 @@
 -fx-background-color:#DFE6E9;
 }
 #Blar{
--fx-background-image: url('../Myndir/Spil/Raudur.jpg');
+-fx-background-image: url('../Myndir/Spil/Blar.jpg');
     -fx-background-size: contain;
     -fx-background-position: center;
 }
-#Gaen{
+#Graen{
 -fx-background-image: url('../Myndir/Spil/Graen.jpg');
     -fx-background-size: contain;
     -fx-background-position: center;

@@ -5,7 +5,7 @@ import java.util.Random;
     Katrín
  */
 public class Leikmenn {
-    public String[] Raudur;
+    public String[] Blar;
     public String[] Graen;
     public String[][] Leik;
     public String[] nofn;
@@ -13,7 +13,7 @@ public class Leikmenn {
     public Leikmenn(){
         Leik=new String[8][2];
         nofn=new String[8];
-        Raudur=new String[6];
+        Blar =new String[6];
         Graen=new String[2];
         NextL=0;
 
@@ -34,7 +34,7 @@ public class Leikmenn {
         for (int i=0;i<8;i++) {
             if(i==V){
                 Graen[0]=Leik[i][0];
-                Leik[i][1]="kind";
+                Leik[i][1]="úlfur";
 
             }
             else if(i==U){
@@ -43,8 +43,8 @@ public class Leikmenn {
 
             }
             else {
-                Raudur[Bnext]=Leik[i][0];
-                Leik[i][1]="kjötæta";
+                Blar[Bnext]=Leik[i][0];
+                Leik[i][1]="alæta";
 
                 ++Bnext;
             }
@@ -52,7 +52,7 @@ public class Leikmenn {
     }
 
     public String[] getBlar() {
-        return Raudur;
+        return Blar;
     }
 
     public String[] getGraen() {

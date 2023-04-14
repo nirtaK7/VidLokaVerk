@@ -44,8 +44,7 @@ public class nofnController {
         Leikur.add(L8.getText());
 
         if(Leikur.fullt()){
-            ViewSwitcher.lookup(View.HLUTVERK);
-            ViewSwitcher.switchTo(View.HLUTVERK);
+            ViewSwitcher.switchTo(View.Saga);
         }
         else {
                 ButtonType bType = new ButtonType("Í lagi",

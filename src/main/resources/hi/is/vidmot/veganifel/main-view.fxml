@@ -74,7 +74,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Pane fx:id="Gaen" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                        <Pane fx:id="Graen" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
                         <Pane fx:id="Blar" prefHeight="200.0" prefWidth="200.0" />
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
