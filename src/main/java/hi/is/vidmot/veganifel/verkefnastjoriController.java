@@ -4,7 +4,7 @@ import hi.is.vidmot.vinnsla.Cards;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -27,37 +27,41 @@ public class verkefnastjoriController {
     public ObservableList<VBox> Spil= FXCollections.observableArrayList();
     public void veljaSpil(){
         VBox S1=new VBox();
-        S1.setId("S1");
         VBox S2=new VBox();
-        S2.setId("S2");
         VBox S3=new VBox();
-        S3.setId("S3");
         Spil.add(S1);
         Spil.add(S2);
         Spil.add(S3);
         fxSpilaListi.getChildren().addAll(S1,S2,S3);
-
        for(VBox v :Spil){
-            v.getChildren().clear();
-            Cards s = new Cards();
-           final ImageView i = s.RandomCard();
-           final Button velja = new Button("Henda");
+           v.getChildren().clear();
+           Cards s = new Cards();
+           ImageView i = s.RandomCard();
+           Button velja = new Button("Henda");
+           v.setId(i.getId());
            v.getChildren().addAll(i,velja);
             velja.setOnAction(e ->{
                String a= fxbreytaTexta.getText();
                 if(Objects.equals(a, "Ritari")){
-                    initialize();
+
+                    fxSpilaListi.getChildren().remove(v);
                     Next();
+                    initialize();
+
                     return;
                 }
                v.getChildren().removeAll(i, velja);
+                fxSpilaListi.getChildren().remove(v);
                fela();
                fxbreytaTexta.setText("Ritari");
                text.setText("Þú átta að henda einu spili sem á ekki að fara á leikborðið");
+
            });
         }
     }
+
     public void Next(){
+        String s=fxSpilaListi.getChildren().get(0).getId();
         ViewSwitcher.switchTo(View.MAIN);
     }
     public void setText(){
