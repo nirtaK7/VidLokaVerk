@@ -14,12 +14,6 @@ public class Cards {
         ImageView k = new ImageView();
         Image a=new Image(getClass().getResourceAsStream("/hi/is/vidmot/Myndir/Spil/Blar.jpg"));
         Image b=new Image(getClass().getResourceAsStream("/hi/is/vidmot/Myndir/Spil/Graen.jpg"));
-
-        /*
-        Image a=new Image("file:/Myndir/Spil/Blar.jpg");
-         Image b = new Image("file:/Myndir/Spil/Graen.jpg");
-         */
-
         if(x<33){
             k.setImage(a);
             k.setId("B");
