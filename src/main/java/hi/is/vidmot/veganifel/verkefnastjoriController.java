@@ -24,7 +24,6 @@ public class verkefnastjoriController {
     @FXML
     public Label fxbreytaTexta;
     public ObservableList<VBox> Spil= FXCollections.observableArrayList();
-
     public void veljaSpil(){
         VBox S1=new VBox();
         S1.setId("S1");
@@ -46,8 +45,9 @@ public class verkefnastjoriController {
             velja.setOnAction(e ->{
                String a= fxbreytaTexta.getText();
                 if(Objects.equals(a, "Ritari")){
-                    setText();
+                    initialize();
                     Next();
+                    return;
                 }
                v.getChildren().removeAll(i, velja);
                fela();
@@ -67,8 +67,8 @@ public class verkefnastjoriController {
     }
     public void initialize(){
         setText();
-        Spil.removeAll();
         fxSpilaListi.getChildren().clear();
+        Spil.clear();
         fxSpilaListi.setVisible(false);
         veljaSpil();
     }
