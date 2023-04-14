@@ -4,6 +4,7 @@ import hi.is.vidmot.vinnsla.Cards;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
@@ -53,7 +54,6 @@ public class verkefnastjoriController {
                fela();
                fxbreytaTexta.setText("Ritari");
                text.setText("Þú átta að henda einu spili sem á ekki að fara á leikborðið");
-
            });
         }
     }
