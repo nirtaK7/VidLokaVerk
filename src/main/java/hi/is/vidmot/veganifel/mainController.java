@@ -206,32 +206,33 @@ public class mainController {
         ViewSwitcher.switchTo(View.MAINREGLUR);
     }
     public void tilBaka(){ ViewSwitcher.switchTo(View.HLUTVERK);}
-    public void lagtABord(String s){
-        if(Objects.equals(s, "B")){
-            for(Pane pane:B){
-                if(!pane.isVisible()){
+    public void lagtABord(String s) {
+        String[] v;
+        if (Objects.equals(s, "B")) {
+            for (Pane pane : B) {
+                if (!pane.isVisible()) {
                     pane.setVisible(true);
                     return;
                 }
             }
-            Alert a = Vinna();
+            v=L.getBlar();
+            Alert a = Vinna(v);
             a.showAndWait();
         }
-        if(Objects.equals(s, "G")){
-            for(Pane pane:G){
-                if(!pane.isVisible()){
+        if (Objects.equals(s, "G")) {
+            for (Pane pane : G) {
+                if (!pane.isVisible()) {
                     pane.setVisible(true);
                     return;
                 }
             }
-            Alert a = Vinna();
+            v=L.getGraen();
+            Alert a = Vinna(v);
             a.showAndWait();
         }
     }
     ObservableList<Pane> B = FXCollections.observableArrayList();
     ObservableList<Pane> G = FXCollections.observableArrayList();
-
-
     public void fela(){
         B.add(B0);
         B.add(B1);
@@ -247,7 +248,6 @@ public class mainController {
         G.add(G4);
         G.add(G5);
         G.add(G6);
-
         for(Pane pane:B){
             pane.setVisible(false);
         }
@@ -256,10 +256,17 @@ public class mainController {
         }
     }
 
-    private Alert Vinna() {
+    private Alert Vinna(String [] v) {
+        String[] G=L.getGraen();
+        String s="Til hamingju ";
+        for (String a:v){
+            s=s+"," +a;
+        }
+        s=s+"\nÞið unnuð leikinn!"+"\n"+G[0]+"Var vegan og "+G[1]+" var úlfurinn";
+
         ButtonType bType = new ButtonType("ILAGI" ,
             ButtonBar.ButtonData.OK_DONE);
-        Alert a = new Alert(Alert.AlertType.NONE, "", bType);
+        Alert a = new Alert(Alert.AlertType.NONE, s, bType);
         a.setTitle("Vegan í felum");
         return a;
 
