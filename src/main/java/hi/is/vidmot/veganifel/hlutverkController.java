@@ -82,12 +82,12 @@ public class hlutverkController{
             }
         }
         if(Objects.equals(Leik[x][1], "úlfur")){
-            for(int i =0;i<Leik.length;i++){
-                if(Objects.equals(Leik[i][1], "vegan")){
-                    vegan=Leik[i][0];
+            for (String[] strings : Leik) {
+                if (Objects.equals(strings[1], "vegan")) {
+                    vegan = strings[0];
                 }
             }
-            return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna grænum spilum "+"\nMeð þér í liði er " +vegan +" sem er úlfur ";
+            return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna grænum spilum "+"\nMeð þér í liði er " +vegan +" sem er vegan ";
         }
         if(Objects.equals(Leik[x][1], "vegan")){
             return Leik[x][0]+" í þessum leik ert þú "+Leik[x][1]+"\nÞú ert að fara að reyna að safna grænum spilum ";
