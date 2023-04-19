@@ -56,3 +56,6 @@
     -fx-background-size: contain;
     -fx-background-position: center;
 }
+#fxListRitara{
+-fx-opacity: 1;
+}

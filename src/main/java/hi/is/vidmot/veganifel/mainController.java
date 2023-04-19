@@ -131,6 +131,12 @@ public class mainController {
             }
         }
         fxListRitara.setItems(s);
+        fxListRitara.setDisable(false);
+        fxListRitara.setOnAction(e->{
+            if(fxListRitara.getSelectionModel().getSelectedItem()!=null){
+                fxListRitara.setDisable(true);
+            }
+        });
     }
    public void kosningar(){
        j=0;
@@ -154,16 +160,36 @@ public class mainController {
            Button nei = new Button("Nei");
            nei.setId("Nei");
            ja.setOnAction(e -> {
-               j++;
-               h.getChildren().removeAll(ja,nei);
+               if(fxListRitara.getSelectionModel().getSelectedItem()!=null){
+                   j++;
+                   h.getChildren().removeAll(ja,nei);
+               }
+               else {
+                   Alert a = DadVantarRitaraAlert();
+                   a.showAndWait();
+               }
            });
            nei.setOnAction(e -> {
-               n++;
-               h.getChildren().removeAll(ja,nei);
+               if(fxListRitara.getSelectionModel().getSelectedItem()!=null){
+                   n++;
+                   h.getChildren().removeAll(ja,nei);
+               }
+               else {
+                   Alert a = DadVantarRitaraAlert();
+                   a.showAndWait();
+               }
            });
            h.getChildren().addAll(ja, nei);
        }
     }
+    public Alert DadVantarRitaraAlert(){
+        ButtonType bType = new ButtonType("Í lagi", ButtonBar.ButtonData.OK_DONE);
+        String n="";
+        Alert a = new Alert(Alert.AlertType.NONE,  "Það þarf að velja ritara áður en það er kosið", bType);
+        a.setHeaderText("Það vantar ritara");
+        return a;
+    }
+
     public void fjoldiatkvaeda(boolean boo){
         ButtonType bType = new ButtonType("Í lagi",
                 ButtonBar.ButtonData.OK_DONE);

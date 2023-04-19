@@ -1,8 +1,14 @@
-.B{
--fx-fit-width: 100px; /* Set the width to your desired value */
-    -fx-fit-height: 100px; /* Set the height to your desired value */
+.root{
+-fx-background-color:#DFE6E9;
+ -fx-background-size: cover;
 }
-.G{
--fx-fit-width: 100px; /* Set the width to your desired value */
-    -fx-fit-height: 100px; /* Set the height to your desired value */
+.vbox {
+    -fx-padding: 10px;
+    -fx-background-radius: 5px;
+    -fx-alignment: center;
+}
+.button{
+    -fx-padding: 10px;
+    -fx-background-radius: 15px;
+    -fx-alignment: center;
 }

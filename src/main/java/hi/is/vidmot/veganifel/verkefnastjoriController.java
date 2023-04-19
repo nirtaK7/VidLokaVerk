@@ -4,6 +4,7 @@ import hi.is.vidmot.vinnsla.Cards;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -37,6 +38,7 @@ public class verkefnastjoriController {
            v.getChildren().clear();
            Cards s = new Cards();
            ImageView i = s.RandomCard();
+           v.setAlignment(Pos.CENTER);
            Button velja = new Button("Henda");
            v.setId(i.getId());
            v.getChildren().addAll(i,velja);
