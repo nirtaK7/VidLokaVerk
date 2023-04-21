@@ -10,7 +10,7 @@ public class Cards {
 
     public ImageView RandomCard(){
         Random r =new Random();
-        int x = r.nextInt(100);
+        int x = r.nextInt(101);
         ImageView k = new ImageView();
         Image a=new Image(getClass().getResourceAsStream("/hi/is/vidmot/Myndir/Spil/Blar.jpg"));
         Image b=new Image(getClass().getResourceAsStream("/hi/is/vidmot/Myndir/Spil/Graen.jpg"));
