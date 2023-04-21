@@ -295,7 +295,6 @@ public class mainController {
         Alert a = new Alert(Alert.AlertType.NONE, s, bType);
         a.setTitle("Vegan í felum");
         return a;
-
     }
 
 }
